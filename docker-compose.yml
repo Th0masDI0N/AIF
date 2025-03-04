@@ -1,0 +1,22 @@
+services:
+  api:
+    container_name: mnist-flask-app
+    build: ./mnist-flask-app
+    ports:
+      - "5000:5000"
+    networks:
+      - mnist-network
+
+  interface:
+    container_name: mnist-interface-st
+    build: ./mnist-interface-st
+    ports:
+      - "5001:5001"
+    depends_on:
+      - api
+    networks:
+      - mnist-network
+
+networks:
+  mnist-network:
+    driver: bridge
