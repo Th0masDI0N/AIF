@@ -1,0 +1,13 @@
+Dockerfile
+__pycache__/
+data/
+mnist_api.py
+mnist_gui.py
+mnist_st.py
+model.py
+requirements.txt
+runs/
+test_api.ipynb
+train.py
+weights
+
